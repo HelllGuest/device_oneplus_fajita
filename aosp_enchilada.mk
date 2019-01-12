@@ -21,9 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from enchilada device
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BOOT_ANIMATION_RES := 2140
 EXTENDED_BUILD_TYPE := OFFICIAL
 TARGET_INCLUDE_STOCK_ARCORE := true
+
+TARGET_USE_JELLY := true
 
 # Inherit some common AEX stuff.
 $(call inherit-product, vendor/aosp/common.mk)
