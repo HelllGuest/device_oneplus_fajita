@@ -18,11 +18,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from enchilada device
-$(call inherit-product, device/oneplus/enchilada/device.mk)
+# Inherit from fajita device
+$(call inherit-product, device/oneplus/fajita/device.mk)
 
 TARGET_BOOT_ANIMATION_RES := 2140
-EXTENDED_BUILD_TYPE := OFFICIAL
+EXTENDED_BUILD_TYPE := UNOFFICIAL
 TARGET_INCLUDE_STOCK_ARCORE := true
 
 TARGET_USE_JELLY := true
@@ -32,23 +32,20 @@ $(call inherit-product, vendor/aosp/common.mk)
 
 # Maintainer Prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
-DEVICE_MAINTAINERS="Akash Srivastava"
+DEVICE_MAINTAINERS="Anoop Kumar"
 
-PRODUCT_NAME := aosp_enchilada
-PRODUCT_DEVICE := enchilada
+PRODUCT_NAME := aosp_fajita
+PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := ONEPLUS A6003
-PRODUCT_RELEASE_NAME := enchilada
+PRODUCT_MODEL := ONEPLUS A6013
+PRODUCT_RELEASE_NAME := fajita
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-TARGET_VENDOR_PRODUCT_NAME := OnePlus6
-TARGET_VENDOR_DEVICE_NAME := OnePlus6
+TARGET_VENDOR_PRODUCT_NAME := OnePlus6T
+TARGET_VENDOR_DEVICE_NAME := OnePlus6T
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=OnePlus6 \
-    PRODUCT_NAME=OnePlus6 \
-    PRIVATE_BUILD_DESC="OnePlus6-user 8.1.0 OPM1.171019.011 273 release-keys"
-
-BUILD_FINGERPRINT := OnePlus/OnePlus6/OnePlus6:8.1.0/OPM1.171019.011/06140300:user/release-keys
+    BUILD_FINGERPRINT=OnePlus/OnePlus6T/OnePlus6T:9/PKQ1.180716.001/1811270237:user/release-keys \
+    PRIVATE_BUILD_DESC="OnePlus6T-user 9 PKQ1.180716.001 1811270237 release-keys"
